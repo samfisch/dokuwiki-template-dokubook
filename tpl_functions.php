@@ -10,9 +10,9 @@ if(!defined('DOKU_INC')) die();
 if(!defined('DOKU_LF')) define('DOKU_LF', "\n");
 
 // load language files
-require_once(DOKU_TPLINC.'lang/en/lang.php');
+tpl_include('lang/en/lang.php');
 if(@file_exists(DOKU_TPLINC.'lang/'.$conf['lang'].'/lang.php')) {
-    require_once(DOKU_TPLINC.'lang/'.$conf['lang'].'/lang.php');
+    tpl_include('lang/'.$conf['lang'].'/lang.php');
 }
 
 /**

@@ -15,7 +15,7 @@
 
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
-require_once(DOKU_TPLINC.'tpl_functions.php');
+tpl_include('tpl_functions.php');
 global $REV;
 
 ?>
