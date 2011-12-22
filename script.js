@@ -5,7 +5,7 @@
  */
 
 // attach the AJAX index to the sidebar index
-addInitEvent(function(){
-    index.treeattach($('sb__index__tree'));
+jQuery(document).ready(function($) {
+    //index.treeattach($('sb__index__tree'));
 });
 

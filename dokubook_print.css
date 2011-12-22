@@ -8,3 +8,5 @@
 div.dokuwiki div.stylehead { display: none; }
 div.dokuwiki div.sidebar { display: none; }
 div.dokuwiki a.action { display: none; }
+div.dokuwiki .breadcrumbs { display: none; }
+

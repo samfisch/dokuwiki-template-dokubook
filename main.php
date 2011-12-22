@@ -15,8 +15,9 @@
 
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
-require_once(DOKU_TPLINC.'tpl_functions.php');
+tpl_include('tpl_functions.php');
 global $REV;
+global $ACT;
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -63,7 +64,7 @@ global $REV;
   </style>
 </head>
 
-<body>
+<body class="<?php echo $ACT ?>">
 <?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
 <div class="dokuwiki">
   <?php html_msgarea()?>
@@ -78,8 +79,10 @@ global $REV;
     <div class="stylehead">
 
       <div class="header">
-        <?php /*old includehook*/ @include(dirname(__FILE__).'/pageheader.html')?>
-        <?php /*old includehook*/ @include(dirname(__FILE__).'/header.html')?>
+
+<?php #tpl_include('pageheader.html'); ?>
+<?php @tpl_include('header.html'); ?>
+
         <div class="logo">
           <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" accesskey="h" title="[ALT+H]"')?>
         </div>

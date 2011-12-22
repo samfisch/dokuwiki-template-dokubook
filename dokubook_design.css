@@ -6,13 +6,17 @@
  */
 
 body {
-  background: __white__ url(images/dwbg.jpg) repeat-x top left;
+  background: __white__ url(/lib/tpl/dokubook/images/dwbg.jpg) repeat-x top left;
 }
 
 div.dokuwiki {
   font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 }
 
+body.media div.dokuwiki div#dokubook_container_left {
+  left: 10px;
+  right: 10px;
+}
 div.dokuwiki div#dokubook_container_left {
   padding-bottom: 0.8em;
   position: absolute;
@@ -20,6 +24,9 @@ div.dokuwiki div#dokubook_container_left {
   right: 10px;
 }
 
+body.media div.dokuwiki div#dokubook_container_right {
+  right: 10px;
+}
 div.dokuwiki div#dokubook_container_right {
   padding-bottom: 0.8em;
   position: absolute;
@@ -28,6 +35,11 @@ div.dokuwiki div#dokubook_container_right {
 }
 
 /* -------------- notifications ------------------- */
+body.media div.dokuwiki div.info,
+body.media div.dokuwiki div.success,
+body.media div.dokuwiki div.error {
+    margin-left: 100px;
+}
 div.dokuwiki div.info,
 div.dokuwiki div.success,
 div.dokuwiki div.error {
@@ -91,6 +103,9 @@ div.dokuwiki ul#top__nav a.revert {
 }
 
 /* -------------- sidebar ------------------------- */
+body.media div.dokuwiki div#sidebar_left {
+    display: none;
+}
 div.dokuwiki div#sidebar_left {
   position: absolute;
   top: 0;
@@ -98,6 +113,9 @@ div.dokuwiki div#sidebar_left {
   width: 160px;
 }
 
+body.media div.dokuwiki div#sidebar_right {
+    display: none;
+}
 div.dokuwiki div#sidebar_right {
   position: absolute;
   top: 0;
@@ -279,6 +297,10 @@ div.dokuwiki div#toolbox a.backlink {
 
 div.dokuwiki div#toolbox a.profile {
   background: transparent url(images/tool-profile.png) 0px 1px no-repeat;
+  padding: 1px 0px 1px 18px;
+}
+div.dokuwiki div#toolbox a.media {
+  background: transparent url(/lib/images/mediamanager.png) 0px 1px no-repeat;
   padding: 1px 0px 1px 18px;
 }
 
