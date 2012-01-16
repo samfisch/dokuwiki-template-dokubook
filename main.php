@@ -16,7 +16,7 @@
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
 tpl_include('tpl_functions.php');
-global $REV;
+global $REV, $lang;
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -33,8 +33,6 @@ global $REV;
   <?php tpl_metaheaders()?>
 
   <link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
-
-  <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 
   <!-- change link borders dynamically -->
   <style type="text/css">
@@ -64,7 +62,6 @@ global $REV;
 </head>
 
 <body>
-<?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
 <div class="dokuwiki">
   <?php html_msgarea()?>
 
@@ -78,8 +75,7 @@ global $REV;
     <div class="stylehead">
 
       <div class="header">
-        <?php /*old includehook*/ @include(dirname(__FILE__).'/pageheader.html')?>
-        <?php /*old includehook*/ @include(dirname(__FILE__).'/header.html')?>
+        <?php tpl_include( 'header.html' )?>
         <div class="logo">
           <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" accesskey="h" title="[ALT+H]"')?>
         </div>
@@ -155,11 +151,7 @@ global $REV;
 
     <?php tpl_footer() ?>
 
-    <div class="stylefoot">
-      <?php /*old includehook*/ @include(dirname(__FILE__).'/pagefooter.html')?>
-    </div>
-
-    <?php /*old includehook*/ @include(dirname(__FILE__).'/footer.html')?>
+    <?php tpl_include( 'footer.html' )?>
 
   </div>
 
