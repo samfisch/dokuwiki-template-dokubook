@@ -15,6 +15,22 @@ if(@file_exists(DOKU_TPLINC.'lang/'.$conf['lang'].'/lang.php')) {
     tpl_include('lang/'.$conf['lang'].'/lang.php');
 }
 
+function html_list_index_navigation($item){
+    global $ID;
+    $ret = '';
+    $base = ':'.$item['id'];
+    $base = substr($base,strrpos($base,':')+1);
+    if($item['type']=='d'){
+        $ret .= '<a href="'.wl($item['id']).'/" class="idx_dir"><strong>';
+        $ret .= $base;
+        $ret .= '</strong></a>';
+    }else{
+        $ret .= html_wikilink(':'.$item['id']);
+    }
+    return $ret;
+}
+
+
 /**
  * checks if a file called logo.png or logo.jpg exists
  * and uses it as logo, uses the dokuwiki logo by default
@@ -45,7 +61,10 @@ function tpl_logo() {
     }
 
     $out .= '<a href="' . DOKU_BASE . '" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]">';
-    $out .= '  <img class="logo" src="' . $logo . '" alt="' . $conf['title'] . '" /></a>' . DOKU_LF;
+		if( $logo ) {
+				$out .= '  <img class="logo" src="' . $logo . '" alt="' . $conf['title'] . '" />' . DOKU_LF;
+		}
+		$out .= '</a>' . DOKU_LF;
 
     print ($out);
 }
@@ -105,6 +124,7 @@ function tpl_sidebar() {
     print '<div id="toolbox" class="sidebar_box">' . DOKU_LF;
     tpl_actionlink('admin');
     tpl_actionlink('index');
+    tpl_actionlink('media');
     tpl_actionlink('recent');
     tpl_actionlink('backlink');
     tpl_actionlink('profile');
