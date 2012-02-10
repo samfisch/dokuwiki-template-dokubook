@@ -9,6 +9,12 @@ body {
   background: __white__ url(/lib/tpl/dokubook/images/dwbg.jpg) repeat-x top left;
 }
 
+div.dokuwiki a.urlextern:visited,
+div.dokuwiki a.windows:visited,
+div.dokuwiki a.interwiki:visited {
+  color: __visited__;
+}
+
 div.dokuwiki {
   font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 }

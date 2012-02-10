@@ -124,6 +124,7 @@ function tpl_sidebar() {
     print '<div id="toolbox" class="sidebar_box">' . DOKU_LF;
     tpl_actionlink('admin');
     tpl_actionlink('index');
+    tpl_actionlink('media');
     tpl_actionlink('recent');
     tpl_actionlink('backlink');
     tpl_actionlink('media');
