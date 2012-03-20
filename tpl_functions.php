@@ -132,7 +132,7 @@ function tpl_sidebar() {
     print '</div>' . DOKU_LF;
 
     // restore ID just in case
-    $Id = $svID;
+    $ID = $svID;
 }
 
 /**

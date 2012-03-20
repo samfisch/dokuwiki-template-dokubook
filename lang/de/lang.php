@@ -1,6 +1,6 @@
 <?php
 /**
- * English Language file for DokuBook template
+ * German Language file for DokuBook template
  */
 
 $lang['toolbox']    = 'toolbox';
