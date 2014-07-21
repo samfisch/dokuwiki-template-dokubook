@@ -39,7 +39,22 @@ global $ACT;
 
   <!-- change link borders dynamically -->
   <style type="text/css">
-    <?php 
+   <?php 
+     $sw = tpl_getConf('sbwidth');
+     $cw = tpl_getConf('containerwidth');
+
+     if( $sw ) {
+      echo ".sidebar { width: ${sw}px; }";
+     }
+     if( $cw ) {
+      echo "#dokubook_container_left, #dokubook_container_right { width: ${cw}px; }";
+    }
+     if( $sw && $cw ) {
+      $fw = $sw + $cw + 15; 
+      echo "#top__nav { width: ${fw}px; }";
+      echo ".dokuwiki { width: ${fw}px; margin: 0 auto; }";
+    }
+
     if($ACT == 'show' || $ACT == 'edit') { 
         if($ACT == 'show' && $INFO['ismanager'] && actionOK('revert') && !empty($REV)) {
     ?>

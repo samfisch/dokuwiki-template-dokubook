@@ -25,9 +25,8 @@ body.media div.dokuwiki div#dokubook_container_left {
 }
 div.dokuwiki div#dokubook_container_left {
   padding-bottom: 0.8em;
-  position: absolute;
-  left: 170px;
-  right: 10px;
+  float: left;
+  margin-left: 1em;
 }
 
 body.media div.dokuwiki div#dokubook_container_right {
@@ -35,9 +34,7 @@ body.media div.dokuwiki div#dokubook_container_right {
 }
 div.dokuwiki div#dokubook_container_right {
   padding-bottom: 0.8em;
-  position: absolute;
-  right: 170px;
-  left: 10px;
+  float: right;
 }
 
 /* -------------- notifications ------------------- */
@@ -113,19 +110,14 @@ body.media div.dokuwiki div#sidebar_left {
     display: none;
 }
 div.dokuwiki div#sidebar_left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 160px;
+  float:  left;
 }
 
 body.media div.dokuwiki div#sidebar_right {
     display: none;
 }
 div.dokuwiki div#sidebar_right {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float:  left;
   width: 160px;
 }
 
@@ -142,11 +134,9 @@ div.dokuwiki div.sidebar .sidebar_box ol {
 }
 
 div.dokuwiki div#sidebar_left .sidebar_box {
-  border-left: none;
 }
 
 div.dokuwiki div#sidebar_right .sidebar_box {
-  border-right: none;
 }
 
 div.dokuwiki div.sidebar img.logo {
@@ -163,18 +153,15 @@ div.dokuwiki div.sidebar .sb_label {
 
 div.dokuwiki div.sidebar div#search {
   font-size: 100%;
-  border: 1px solid __border__;
   margin-bottom: 0.5em;
   background: __background__;
   padding-left: 0.4em;
 }
 
 div.dokuwiki div#sidebar_left div#search {
-  border-left: none;
 }
 
 div.dokuwiki div#sidebar_right div#search {
-  border-right: none;
 }
 div.dokuwiki div.sidebar div#login div.user {
   font-size: 40%;
